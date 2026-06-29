@@ -1,0 +1,35 @@
+id: who-gho
+title: WHO Global Health Observatory (GHO)
+description: >
+  The World Health Organization's portal for global health statistics — curated
+  indicators on mortality, disease burden, health systems, and the determinants of
+  health for WHO member states.
+publisher: World Health Organization (WHO)
+topics: [global, indicators, mortality, disease-burden, health-systems]
+source:
+  canonical_url: https://www.who.int/data/gho
+  predecessor_url: null
+  doi: null
+access:
+  method: [web, api]
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format: [csv, json, xml]
+coverage:
+  spatial: global (WHO member states)
+  temporal: "2000-present"
+  cadence: irregular
+license: CC-BY-NC-SA-3.0-IGO
+attribution: "World Health Organization, Global Health Observatory"
+archive:
+  wayback_url: null
+  cloud_mirror: null
+  mirror: null
+status: live
+last_checked: "2026-06-29"
+checksum: null
+notes: >
+  Programmatic access via the GHO OData API (https://ghoapi.azureedge.net/api/).
+  WHO data carries a non-commercial CC license — note this differs from the
+  US-Gov public-domain entries.

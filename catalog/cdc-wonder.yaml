@@ -1,0 +1,34 @@
+id: cdc-wonder
+title: CDC WONDER
+description: >
+  CDC's Wide-ranging ONline Data for Epidemiologic Research — an integrated query
+  system for dozens of public health datasets (mortality, natality, cancer,
+  notifiable diseases, and environmental exposures).
+publisher: U.S. Centers for Disease Control and Prevention (CDC)
+topics: [mortality, natality, surveillance, epidemiology, query]
+source:
+  canonical_url: https://wonder.cdc.gov/
+  predecessor_url: null
+  doi: null
+access:
+  method: [web, api]
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format: [html, csv, txt, xml]
+coverage:
+  spatial: United States
+  temporal: "varies by dataset"
+  cadence: irregular
+license: public-domain (US Gov work)
+attribution: "U.S. Centers for Disease Control and Prevention, CDC WONDER"
+archive:
+  wayback_url: null
+  cloud_mirror: null
+  mirror: null
+status: live
+last_checked: "2026-06-29"
+checksum: null
+notes: >
+  Query-based access; sub-national counts are privacy-suppressed. The API uses an
+  XML request format.

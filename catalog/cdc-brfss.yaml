@@ -1,0 +1,33 @@
+id: cdc-brfss
+title: Behavioral Risk Factor Surveillance System (BRFSS)
+description: >
+  The nation's premier system of health-related telephone surveys collecting state
+  data on US residents' risk behaviors, chronic conditions, and use of preventive
+  services.
+publisher: U.S. Centers for Disease Control and Prevention (CDC)
+topics: [survey, risk-factors, behavioral, chronic-disease, state]
+source:
+  canonical_url: https://www.cdc.gov/brfss/index.html
+  predecessor_url: null
+  doi: null
+access:
+  method: [web, bulk]
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format: [sas, ascii, csv]
+coverage:
+  spatial: United States (states, DC, territories)
+  temporal: "1984-present"
+  cadence: annual
+license: public-domain (US Gov work)
+attribution: "U.S. Centers for Disease Control and Prevention, BRFSS"
+archive:
+  wayback_url: null
+  cloud_mirror: null
+  mirror: null
+status: live
+last_checked: "2026-06-29"
+checksum: null
+notes: >
+  Annual survey data released as SAS transport and ASCII files with documentation.
