@@ -1,0 +1,30 @@
+id: cms-data
+title: CMS Data (Medicare & Medicaid)
+description: >
+  Claims-based utilization, spending, and provider data for Medicare and Medicaid.
+publisher: Centers for Medicare & Medicaid Services
+topics: [medicare, medicaid, claims, spending, utilization]
+source:
+  canonical_url: https://data.cms.gov/
+  predecessor_url: null
+  doi: null
+access:
+  method: [web, bulk]
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+formats: [csv, api, json]
+coverage:
+  spatial: United States
+  temporal: null
+  cadence: null
+  license: public-domain (US Gov work)
+attribution: "Centers for Medicare & Medicaid Services"
+archive:
+  wayback_url: null
+  cloud_mirror: null
+  mirror: null
+status: live
+last_checked: "2026-07-01"
+checksum: null
+notes: null
