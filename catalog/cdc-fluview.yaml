@@ -1,4 +1,5 @@
 id: cdc-fluview
+type: dataset
 title: FluView — CDC Influenza Surveillance
 description: CDC's weekly U.S. influenza surveillance report — outpatient illness, virologic, hospitalization,
   and mortality indicators for seasonal flu.
@@ -10,8 +11,6 @@ topics:
 - seasonal
 source:
   canonical_url: https://www.cdc.gov/fluview/index.html
-  predecessor_url: null
-  doi: null
 access:
   method:
   - web
@@ -23,17 +22,20 @@ format:
 - html
 - csv
 - json
+status: live
+status_since: '2026-06-29'
+status_source: auto
+observed:
+  checked: '2026-06-29'
+  reachable: null
+  http_status: null
+  final_url: null
+  redirect_chain: []
+  fingerprint_result: no-baseline
 coverage:
   spatial: United States
   temporal: 1997-present
   cadence: weekly
 license: public-domain (US Gov work)
 attribution: U.S. CDC, FluView
-archive:
-  wayback_url: null
-  cloud_mirror: null
-  mirror: null
-status: live
-last_checked: '2026-06-29'
-checksum: null
 notes: Data via FluView Interactive and the API.

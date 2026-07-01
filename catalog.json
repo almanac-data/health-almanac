@@ -8,6 +8,7 @@
   "entries": [
     {
       "id": "cdc-brfss",
+      "type": "dataset",
       "title": "Behavioral Risk Factor Surveillance System (BRFSS)",
       "description": "The nation's premier system of health-related telephone surveys collecting state data on US residents' risk behaviors, chronic conditions, and use of preventive services.\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
@@ -19,9 +20,7 @@
         "state"
       ],
       "source": {
-        "canonical_url": "https://www.cdc.gov/brfss/index.html",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://www.cdc.gov/brfss/index.html"
       },
       "access": {
         "method": [
@@ -37,6 +36,17 @@
         "ascii",
         "csv"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "United States (states, DC, territories)",
         "temporal": "1984-present",
@@ -44,18 +54,11 @@
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. Centers for Disease Control and Prevention, BRFSS",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Annual survey data released as SAS transport and ASCII files with documentation.\n"
     },
     {
       "id": "cdc-data-portal",
+      "type": "dataset",
       "title": "CDC Open Data Portal (data.cdc.gov)",
       "description": "CDC's open data portal — hundreds of public health datasets (surveillance, vital statistics, vaccination, environmental health) with a SODA API.",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
@@ -66,9 +69,7 @@
         "api"
       ],
       "source": {
-        "canonical_url": "https://data.cdc.gov/",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://data.cdc.gov/"
       },
       "access": {
         "method": [
@@ -85,6 +86,17 @@
         "json",
         "xml"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "United States",
         "temporal": "varies by dataset",
@@ -92,18 +104,11 @@
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. CDC, data.cdc.gov",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Socrata-based portal with a SODA API."
     },
     {
       "id": "cdc-fluview",
+      "type": "dataset",
       "title": "FluView — CDC Influenza Surveillance",
       "description": "CDC's weekly U.S. influenza surveillance report — outpatient illness, virologic, hospitalization, and mortality indicators for seasonal flu.",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
@@ -114,9 +119,7 @@
         "seasonal"
       ],
       "source": {
-        "canonical_url": "https://www.cdc.gov/fluview/index.html",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://www.cdc.gov/fluview/index.html"
       },
       "access": {
         "method": [
@@ -132,6 +135,17 @@
         "csv",
         "json"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "United States",
         "temporal": "1997-present",
@@ -139,18 +153,11 @@
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. CDC, FluView",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Data via FluView Interactive and the API."
     },
     {
       "id": "cdc-places",
+      "type": "dataset",
       "title": "PLACES: Local Data for Better Health",
       "description": "Model-based small-area estimates of chronic disease measures, health behaviors, and prevention indicators for US counties, places, census tracts, and ZCTAs.\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
@@ -162,9 +169,7 @@
         "local"
       ],
       "source": {
-        "canonical_url": "https://www.cdc.gov/places/index.html",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://www.cdc.gov/places/index.html"
       },
       "access": {
         "method": [
@@ -181,6 +186,17 @@
         "json",
         "geojson"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "United States (county, place, tract, ZCTA)",
         "temporal": "2016-present",
@@ -188,18 +204,11 @@
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. Centers for Disease Control and Prevention, PLACES",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Downloadable datasets are served via the CDC open data portal (data.cdc.gov).\n"
     },
     {
       "id": "cdc-wonder",
+      "type": "dataset",
       "title": "CDC WONDER",
       "description": "CDC's Wide-ranging ONline Data for Epidemiologic Research — an integrated query system for dozens of public health datasets (mortality, natality, cancer, notifiable diseases, and environmental exposures).\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
@@ -211,9 +220,7 @@
         "query"
       ],
       "source": {
-        "canonical_url": "https://wonder.cdc.gov/",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://wonder.cdc.gov/"
       },
       "access": {
         "method": [
@@ -230,6 +237,17 @@
         "txt",
         "xml"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "United States",
         "temporal": "varies by dataset",
@@ -237,18 +255,11 @@
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. Centers for Disease Control and Prevention, CDC WONDER",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Query-based access; sub-national counts are privacy-suppressed. The API uses an XML request format.\n"
     },
     {
       "id": "who-gho",
+      "type": "dataset",
       "title": "WHO Global Health Observatory (GHO)",
       "description": "The World Health Organization's portal for global health statistics — curated indicators on mortality, disease burden, health systems, and the determinants of health for WHO member states.\n",
       "publisher": "World Health Organization (WHO)",
@@ -260,9 +271,7 @@
         "health-systems"
       ],
       "source": {
-        "canonical_url": "https://www.who.int/data/gho",
-        "predecessor_url": null,
-        "doi": null
+        "canonical_url": "https://www.who.int/data/gho"
       },
       "access": {
         "method": [
@@ -278,6 +287,17 @@
         "json",
         "xml"
       ],
+      "status": "live",
+      "status_since": "2026-06-29",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-06-29",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
       "coverage": {
         "spatial": "global (WHO member states)",
         "temporal": "2000-present",
@@ -285,14 +305,6 @@
       },
       "license": "CC-BY-NC-SA-3.0-IGO",
       "attribution": "World Health Organization, Global Health Observatory",
-      "archive": {
-        "wayback_url": null,
-        "cloud_mirror": null,
-        "mirror": null
-      },
-      "status": "live",
-      "last_checked": "2026-06-29",
-      "checksum": null,
       "notes": "Programmatic access via the GHO OData API (https://ghoapi.azureedge.net/api/). WHO data carries a non-commercial CC license — note this differs from the US-Gov public-domain entries.\n"
     }
   ]
