@@ -1,9 +1,9 @@
 {
   "name": "Health Almanac",
   "description": "An open, versioned index of public health data.",
-  "count": 6,
+  "count": 7,
   "by_status": {
-    "live": 6
+    "live": 7
   },
   "entries": [
     {
@@ -256,6 +256,56 @@
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. Centers for Disease Control and Prevention, CDC WONDER",
       "notes": "Query-based access; sub-national counts are privacy-suppressed. The API uses an XML request format.\n"
+    },
+    {
+      "id": "cms-data",
+      "type": "dataset",
+      "title": "CMS Data (Medicare & Medicaid)",
+      "description": "Claims-based utilization, spending, and provider data for Medicare and Medicaid.\n",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "topics": [
+        "medicare",
+        "medicaid",
+        "claims",
+        "spending",
+        "utilization"
+      ],
+      "source": {
+        "canonical_url": "https://data.cms.gov/"
+      },
+      "access": {
+        "method": [
+          "web",
+          "bulk"
+        ],
+        "auth_required": false,
+        "auth_note": null,
+        "rate_limit": null
+      },
+      "format": [
+        "csv",
+        "api",
+        "json"
+      ],
+      "status": "live",
+      "status_since": "2026-07-01",
+      "status_source": "auto",
+      "observed": {
+        "checked": "2026-07-01",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
+      "coverage": {
+        "spatial": "United States",
+        "temporal": "",
+        "cadence": "irregular"
+      },
+      "license": "public-domain (US Gov work)",
+      "attribution": "Centers for Medicare & Medicaid Services",
+      "notes": null
     },
     {
       "id": "who-gho",
