@@ -1,32 +1,44 @@
 id: cdc-places
-title: "PLACES: Local Data for Better Health"
-description: >
-  Model-based small-area estimates of chronic disease measures, health behaviors,
-  and prevention indicators for US counties, places, census tracts, and ZCTAs.
+type: dataset
+title: 'PLACES: Local Data for Better Health'
+description: |
+  Model-based small-area estimates of chronic disease measures, health behaviors, and prevention indicators for US counties, places, census tracts, and ZCTAs.
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
-topics: [chronic-disease, prevalence, small-area, prevention, local]
+topics:
+- chronic-disease
+- prevalence
+- small-area
+- prevention
+- local
 source:
   canonical_url: https://www.cdc.gov/places/index.html
-  predecessor_url: null
-  doi: null
 access:
-  method: [web, api, bulk]
+  method:
+  - web
+  - api
+  - bulk
   auth_required: false
   auth_note: null
   rate_limit: null
-format: [csv, json, geojson]
+format:
+- csv
+- json
+- geojson
+status: live
+status_since: '2026-06-29'
+status_source: auto
+observed:
+  checked: '2026-06-29'
+  reachable: null
+  http_status: null
+  final_url: null
+  redirect_chain: []
+  fingerprint_result: no-baseline
 coverage:
   spatial: United States (county, place, tract, ZCTA)
-  temporal: "2016-present"
+  temporal: 2016-present
   cadence: annual
 license: public-domain (US Gov work)
-attribution: "U.S. Centers for Disease Control and Prevention, PLACES"
-archive:
-  wayback_url: null
-  cloud_mirror: null
-  mirror: null
-status: live
-last_checked: "2026-06-29"
-checksum: null
-notes: >
+attribution: U.S. Centers for Disease Control and Prevention, PLACES
+notes: |
   Downloadable datasets are served via the CDC open data portal (data.cdc.gov).
