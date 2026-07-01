@@ -12,6 +12,10 @@
       "title": "Behavioral Risk Factor Surveillance System (BRFSS)",
       "description": "The nation's premier system of health-related telephone surveys collecting state data on US residents' risk behaviors, chronic conditions, and use of preventive services.\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "survey",
         "risk-factors",
@@ -62,6 +66,10 @@
       "title": "CDC Open Data Portal (data.cdc.gov)",
       "description": "CDC's open data portal — hundreds of public health datasets (surveillance, vital statistics, vaccination, environmental health) with a SODA API.",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "open-data",
         "datasets",
@@ -112,6 +120,10 @@
       "title": "FluView — CDC Influenza Surveillance",
       "description": "CDC's weekly U.S. influenza surveillance report — outpatient illness, virologic, hospitalization, and mortality indicators for seasonal flu.",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "influenza",
         "surveillance",
@@ -161,6 +173,10 @@
       "title": "PLACES: Local Data for Better Health",
       "description": "Model-based small-area estimates of chronic disease measures, health behaviors, and prevention indicators for US counties, places, census tracts, and ZCTAs.\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "chronic-disease",
         "prevalence",
@@ -212,6 +228,10 @@
       "title": "CDC WONDER",
       "description": "CDC's Wide-ranging ONline Data for Epidemiologic Research — an integrated query system for dozens of public health datasets (mortality, natality, cancer, notifiable diseases, and environmental exposures).\n",
       "publisher": "U.S. Centers for Disease Control and Prevention (CDC)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "mortality",
         "natality",
@@ -263,6 +283,10 @@
       "title": "CMS Data (Medicare & Medicaid)",
       "description": "Claims-based utilization, spending, and provider data for Medicare and Medicaid.\n",
       "publisher": "Centers for Medicare & Medicaid Services",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
       "topics": [
         "medicare",
         "medicaid",
@@ -313,6 +337,10 @@
       "title": "WHO Global Health Observatory (GHO)",
       "description": "The World Health Organization's portal for global health statistics — curated indicators on mortality, disease burden, health systems, and the determinants of health for WHO member states.\n",
       "publisher": "World Health Organization (WHO)",
+      "jurisdiction": {
+        "scope": "multilateral",
+        "country": null
+      },
       "topics": [
         "global",
         "indicators",

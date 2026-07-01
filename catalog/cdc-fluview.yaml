@@ -4,6 +4,9 @@ title: FluView — CDC Influenza Surveillance
 description: CDC's weekly U.S. influenza surveillance report — outpatient illness, virologic, hospitalization,
   and mortality indicators for seasonal flu.
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - influenza
 - surveillance

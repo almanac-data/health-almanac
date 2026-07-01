@@ -4,6 +4,9 @@ title: CDC Open Data Portal (data.cdc.gov)
 description: CDC's open data portal — hundreds of public health datasets (surveillance, vital statistics,
   vaccination, environmental health) with a SODA API.
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - open-data
 - datasets

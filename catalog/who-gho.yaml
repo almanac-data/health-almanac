@@ -4,6 +4,9 @@ title: WHO Global Health Observatory (GHO)
 description: |
   The World Health Organization's portal for global health statistics — curated indicators on mortality, disease burden, health systems, and the determinants of health for WHO member states.
 publisher: World Health Organization (WHO)
+jurisdiction:
+  scope: multilateral
+  country: null
 topics:
 - global
 - indicators

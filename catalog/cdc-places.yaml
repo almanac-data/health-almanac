@@ -4,6 +4,9 @@ title: 'PLACES: Local Data for Better Health'
 description: |
   Model-based small-area estimates of chronic disease measures, health behaviors, and prevention indicators for US counties, places, census tracts, and ZCTAs.
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - chronic-disease
 - prevalence

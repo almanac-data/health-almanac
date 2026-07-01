@@ -4,6 +4,9 @@ title: CMS Data (Medicare & Medicaid)
 description: |
   Claims-based utilization, spending, and provider data for Medicare and Medicaid.
 publisher: Centers for Medicare & Medicaid Services
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - medicare
 - medicaid

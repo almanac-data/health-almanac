@@ -4,6 +4,9 @@ title: CDC WONDER
 description: |
   CDC's Wide-ranging ONline Data for Epidemiologic Research — an integrated query system for dozens of public health datasets (mortality, natality, cancer, notifiable diseases, and environmental exposures).
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - mortality
 - natality

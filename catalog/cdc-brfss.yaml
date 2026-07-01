@@ -4,6 +4,9 @@ title: Behavioral Risk Factor Surveillance System (BRFSS)
 description: |
   The nation's premier system of health-related telephone surveys collecting state data on US residents' risk behaviors, chronic conditions, and use of preventive services.
 publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
 topics:
 - survey
 - risk-factors
