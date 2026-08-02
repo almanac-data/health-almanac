@@ -1,9 +1,9 @@
 {
   "name": "Health Almanac",
   "description": "An open, versioned index of public health data.",
-  "count": 7,
+  "count": 8,
   "by_status": {
-    "live": 7
+    "live": 8
   },
   "entries": [
     {
@@ -166,6 +166,60 @@
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. CDC, FluView",
       "notes": "Data via FluView Interactive and the API."
+    },
+    {
+      "id": "cdc-nhanes",
+      "type": "dataset",
+      "title": "National Health and Nutrition Examination Survey (NHANES)",
+      "description": "National survey data on the health and nutrition of adults and children in the United States, combining interviews with physical examinations and laboratory tests.\n",
+      "publisher": "U.S. Centers for Disease Control and Prevention (CDC), National Center for Health Statistics (NCHS)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
+      "topics": [
+        "survey",
+        "nutrition",
+        "laboratory",
+        "examinations",
+        "chronic-disease"
+      ],
+      "source": {
+        "canonical_url": "https://www.cdc.gov/nchs/nhanes/"
+      },
+      "access": {
+        "method": [
+          "web",
+          "bulk"
+        ],
+        "auth_required": false,
+        "auth_note": null,
+        "rate_limit": null
+      },
+      "format": [
+        "xpt",
+        "html",
+        "pdf"
+      ],
+      "status": "live",
+      "status_since": "2026-08-02",
+      "status_source": "curator",
+      "observed": {
+        "checked": "2026-08-02",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null,
+        "redirect_chain": [],
+        "fingerprint_result": "no-baseline"
+      },
+      "coverage": {
+        "spatial": "United States",
+        "temporal": "1971-present",
+        "cadence": "irregular"
+      },
+      "license": "public-domain (US Gov work)",
+      "attribution": "U.S. Centers for Disease Control and Prevention, National Center for Health Statistics, NHANES",
+      "notes": "Public data files and documentation are published at https://wwwn.cdc.gov/nchs/nhanes/Default.aspx (verified 2026-08-02).\nContinuous NHANES has been conducted since 1999 with public-use data released in two-year cycles; the predecessor National Health Examination Survey began in 1959.\n"
     },
     {
       "id": "cdc-places",
