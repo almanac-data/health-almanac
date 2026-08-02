@@ -1,0 +1,43 @@
+id: cdc-wisqars
+type: dataset
+title: WISQARS — Injury Statistics
+description: |
+  CDC injury statistics query system for fatal and nonfatal injury, violent death, and cost-of-injury data in the United States.
+publisher: U.S. Centers for Disease Control and Prevention (CDC)
+jurisdiction:
+  scope: national
+  country: US
+topics:
+- injury
+- mortality
+- nonfatal-injury
+- violence
+- cost-of-injury
+source:
+  canonical_url: https://wisqars.cdc.gov/
+access:
+  method:
+  - web
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format:
+- html
+status: live
+status_since: '2026-08-02'
+status_source: curator
+observed:
+  checked: '2026-08-02'
+  reachable: null
+  http_status: null
+  final_url: null
+  redirect_chain: []
+  fingerprint_result: no-baseline
+coverage:
+  spatial: United States
+  temporal: varies by dataset
+  cadence: irregular
+license: public-domain (US Gov work)
+attribution: U.S. Centers for Disease Control and Prevention, WISQARS
+notes: |
+  Issue source URL https://www.cdc.gov/injury/wisqars/ serves a CDC meta-refresh page to the live WISQARS application at https://wisqars.cdc.gov/.
