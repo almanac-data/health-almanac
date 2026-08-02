@@ -215,12 +215,12 @@
       },
       "coverage": {
         "spatial": "United States",
-        "temporal": "1959-present",
+        "temporal": "1971-present",
         "cadence": "irregular"
       },
       "license": "public-domain (US Gov work)",
       "attribution": "U.S. Centers for Disease Control and Prevention, National Center for Health Statistics, NHANES",
-      "notes": "Public data files and related documentation are available from the NHANES questionnaires, datasets, and related documentation portal.\n"
+      "notes": "Public data files and documentation are published at https://wwwn.cdc.gov/nchs/nhanes/Default.aspx (verified 2026-08-02).\nContinuous NHANES has been conducted since 1999 with public-use data released in two-year cycles; the predecessor National Health Examination Survey began in 1959.\n"
     },
     {
       "id": "cdc-places",
