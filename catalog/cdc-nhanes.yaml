@@ -26,7 +26,6 @@ format:
 - xpt
 - html
 - pdf
-- sas
 status: live
 status_since: '2026-08-02'
 status_source: curator

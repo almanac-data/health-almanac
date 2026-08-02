@@ -199,8 +199,7 @@
       "format": [
         "xpt",
         "html",
-        "pdf",
-        "sas"
+        "pdf"
       ],
       "status": "live",
       "status_since": "2026-08-02",
