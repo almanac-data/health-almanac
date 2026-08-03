@@ -20,7 +20,7 @@ access:
   - web
   - bulk
   auth_required: false
-  auth_note: null
+  auth_note: Public-use files are open; restricted-use microdata requires an approved NCHS Research Data Center application.
   rate_limit: null
 format:
 - html
@@ -45,3 +45,4 @@ attribution: U.S. Centers for Disease Control and Prevention, National Center fo
 notes: |
   The NVSS homepage links to CDC WONDER, downloadable final data, restricted-use data, and documentation for major vital statistics products.
   Mortality public-use documentation is published at https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm (verified 2026-08-02).
+  Much of the mortality and natality data here is queryable through CDC WONDER (catalog entry cdc-wonder); this entry covers the underlying system and its downloadable public-use files.
