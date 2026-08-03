@@ -1,0 +1,47 @@
+id: cdc-nvss
+type: dataset
+title: National Vital Statistics System (NVSS)
+description: |
+  CDC/NCHS system for U.S. vital statistics data on births, deaths, fetal deaths, and related records, including mortality and natality statistics.
+publisher: U.S. Centers for Disease Control and Prevention (CDC), National Center for Health Statistics (NCHS)
+jurisdiction:
+  scope: national
+  country: US
+topics:
+- vital-statistics
+- births
+- mortality
+- cause-of-death
+- fetal-deaths
+source:
+  canonical_url: https://www.cdc.gov/nchs/nvss/index.htm
+access:
+  method:
+  - web
+  - bulk
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format:
+- html
+- pdf
+- txt
+status: live
+status_since: '2026-08-02'
+status_source: curator
+observed:
+  checked: '2026-08-02'
+  reachable: null
+  http_status: null
+  final_url: null
+  redirect_chain: []
+  fingerprint_result: no-baseline
+coverage:
+  spatial: United States
+  temporal: varies by dataset
+  cadence: irregular
+license: public-domain (US Gov work)
+attribution: U.S. Centers for Disease Control and Prevention, National Center for Health Statistics, NVSS
+notes: |
+  The NVSS homepage links to CDC WONDER, downloadable final data, restricted-use data, and documentation for major vital statistics products.
+  Mortality public-use documentation is published at https://www.cdc.gov/nchs/nvss/mortality_public_use_data.htm (verified 2026-08-02).
