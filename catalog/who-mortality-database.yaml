@@ -1,0 +1,48 @@
+id: who-mortality-database
+type: dataset
+title: WHO Mortality Database
+description: |
+  Global mortality data reported annually by WHO Member States from civil registration and vital statistics systems, with cause-of-death detail for comparative epidemiological studies.
+publisher: World Health Organization (WHO)
+jurisdiction:
+  scope: multilateral
+  country: null
+topics:
+- mortality
+- cause-of-death
+- vital-statistics
+- global
+- epidemiology
+source:
+  canonical_url: https://www.who.int/data/data-collection-tools/who-mortality-database
+access:
+  method:
+  - web
+  - bulk
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format:
+- csv
+- zip
+- xlsx
+- pdf
+status: live
+status_since: '2026-08-03'
+status_source: curator
+observed:
+  checked: '2026-08-03'
+  reachable: true
+  http_status: 200
+  final_url: https://www.who.int/data/data-collection-tools/who-mortality-database
+  redirect_chain: []
+  fingerprint_result: no-baseline
+coverage:
+  spatial: global (WHO member states)
+  temporal: 1950-present
+  cadence: annual
+license: non-commercial use only
+attribution: World Health Organization, WHO Mortality Database
+notes: |
+  The WHO page states that the database is compiled from mortality data reported annually by Member States and that the visualization/export portal covers cause-of-death data from 1950 to date. The raw data section was last updated on 23 February 2026 when verified on 2026-08-03.
+  WHO states that no commercial use permission is implied for these transmitted data, so the license field is intentionally narrower than the WHO GHO catalog entry.
