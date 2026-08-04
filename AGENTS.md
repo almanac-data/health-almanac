@@ -19,9 +19,9 @@ read from it. **Do not hardcode domain-specific names into the engine** — put 
 
 **Catalog, don't host.** This repo maps data; it does not store data bytes. Do not add datasets,
 CSVs, NetCDF, GeoTIFFs, or any data payload to the repo. The *only* exception is a deliberate,
-small, at-risk artifact mirrored under an entry's `archive.mirror` field — and only after it's
-been discussed in an issue. If a task tempts you to commit data, stop: the answer is almost
-always a catalog entry pointing to where the data lives.
+small, at-risk artifact recorded as a `recovery[]` candidate — and only after it's been discussed
+in an issue. If a task tempts you to commit data, stop: the answer is almost always a catalog
+entry pointing to where the data lives.
 
 ## Repository map
 
@@ -32,11 +32,18 @@ catalog/<id>.yaml                  one curated dataset per file (source of truth
 catalog.json                       GENERATED build artifact — do not hand-edit
 scripts/validate.py                schema + filename==id + uniqueness checks (CI gate)
 scripts/build_index.py             catalog/*.yaml -> catalog.json
-scripts/check_links.py             reachability checker (read-only; reports, never rewrites)
+scripts/check_links.py             reachability checker (reports; writes `observed` only with --write-observed)
 scripts/alert_on_dead_links.py     turns a reachability report into GitHub issues (idempotent)
 .github/workflows/ci.yml           runs validate + a stale-index guard on every PR
-.github/workflows/link-check.yml   daily reachability sweep + dead-link alerting
+.github/workflows/link-check.yml   daily reachability sweep + dead-link alerting; opens an
+                                   `observed`-refresh PR when the probe sees something new
 ```
+
+This file is propagated verbatim to every vertical, so it describes **only what every
+vertical has**. Tooling that lives in `almanac-template` alone — the recovery bot and the
+rot/drift checkers — is documented in [`docs/ENGINE-TOOLING.md`](docs/ENGINE-TOOLING.md),
+which does not propagate. Adding a template-only path to the map above would hand eleven
+verticals a guide pointing at files they do not have.
 
 ## Working rules / invariants
 
@@ -46,12 +53,17 @@ scripts/alert_on_dead_links.py     turns a reachability report into GitHub issue
 3. **Rebuild the index after touching entries.** Run `python scripts/build_index.py` and
    commit the updated `catalog.json` in the same change. CI fails if it's stale.
 4. **Never hand-edit `catalog.json`.** It is generated. Edit the YAML, regenerate.
-5. **Verify before you assert.** Do not invent `last_checked` dates or URL reachability.
-   If you can reach the network, confirm `source.canonical_url` and set `last_checked` to
+5. **Verify before you assert.** Do not invent `observed.checked` dates or URL reachability.
+   If you can reach the network, confirm `source.canonical_url` and set `observed.checked` to
    today (`YYYY-MM-DD`). If you cannot verify, say so in the PR — do not fabricate.
-6. **Set `status` honestly:** `live` (reachable + maintained), `frozen` (reachable, no longer
-   updated), `moved` (URL changed), `dark` (gone/404), `mirrored` (we hold a copy). If you mark
-   something `dark`/`frozen`, add a `notes` line and an `archive.wayback_url`.
+   **`observed` is machine-written.** Set `checked` and leave `reachable`, `http_status`, and
+   `final_url` null — only `scripts/check_links.py --write-observed` fills those, from a real
+   probe. Recording your own `curl` output there disguises a human check as a machine one.
+   Report what you observed in the PR body; `status` + `status_source: curator` is where a
+   human call belongs.
+6. **Set `status` honestly:** `live`, `revised`, `moved`, `redirected`, `superseded`, `dark`,
+   `frozen` — see `CONTRIBUTING.md` for the full table. If you mark something `dark`/
+   `superseded`, add a `notes` line and, if you have one, a `recovery[]` candidate.
 7. **Authoritative sources only.** Point to the publisher's canonical home, not a reposting.
 8. **One dataset = one file = one PR.** Keep changes small and reviewable.
 
@@ -63,6 +75,31 @@ python scripts/validate.py       # before any commit that touches catalog/
 python scripts/build_index.py    # regenerate catalog.json after entry changes
 python scripts/check_links.py    # verify which sources are still reachable (requires curl)
 ```
+
+**Recording what the probe saw.** `check_links.py` reports and exits; it changes nothing
+unless asked. `--write-observed` writes each probe's facts — `checked`, `reachable`,
+`http_status`, `final_url`, `redirect_chain`, and `fingerprint_result` where a baseline
+exists — into the matching entry's `observed` block, and nothing else. `status` is never
+touched: the machine records what it saw, a curator decides what it means.
+
+```bash
+python scripts/check_links.py --write-observed && python scripts/build_index.py
+```
+
+Rebuild the index in the same change, since `observed` is carried into `catalog.json`.
+
+**CDN-bot-protected sources.** Some federal hosts (BLS, Census, Congress.gov, SEC, GAO)
+sit behind bot protection that curl can't pass, so they show as `blocked / unverifiable`
+rather than `ok`. To verify them, set `reachability.headless: true` in `almanac.config.yml`
+and install the optional headless dependency, then run with `--headless` (CI does this
+automatically when the config flag is on):
+
+```bash
+pip install -r requirements-headless.txt && playwright install --with-deps chromium
+python scripts/check_links.py --headless
+```
+
+The headless rung only ever *upgrades* a blocked source to `ok`; it never flags one as dead.
 
 To add a dataset: copy `catalog/example-dataset.yaml`, fill every required field, validate,
 rebuild the index, open a PR. See `CONTRIBUTING.md` for the full checklist.
