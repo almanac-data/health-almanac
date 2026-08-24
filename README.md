@@ -36,7 +36,7 @@ Stewards: see [docs/STEWARDING.md](docs/STEWARDING.md).
 
 - **Catalog data** (`catalog/`, `catalog.json`) — [CC0 1.0](LICENSE-DATA). Per-dataset licenses are
   recorded in each entry's `license` field (e.g. the WHO GHO data is CC BY-NC-SA 3.0 IGO).
-- **Tooling** (`scripts/`, schema, CI) — [MIT](LICENSE-CODE).
+- **Tooling** (`scripts/`, schema, CI) — [Apache-2.0](LICENSE-CODE).
 
 ---
 
