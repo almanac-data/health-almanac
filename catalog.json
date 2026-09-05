@@ -44,7 +44,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.cdc.gov/brfss/index.html",
@@ -98,7 +98,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://data.cdc.gov/",
@@ -151,7 +151,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.cdc.gov/fluview/index.html",
@@ -205,7 +205,7 @@
       "status_since": "2026-08-02",
       "status_source": "curator",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.cdc.gov/nchs/nhanes/",
@@ -259,7 +259,7 @@
       "status_since": "2026-08-02",
       "status_source": "curator",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.cdc.gov/nchs/nvss/index.htm",
@@ -314,7 +314,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.cdc.gov/places/index.html",
@@ -365,7 +365,7 @@
       "status_since": "2026-08-02",
       "status_source": "curator",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://wisqars.cdc.gov/",
@@ -420,7 +420,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://wonder.cdc.gov/",
@@ -474,7 +474,7 @@
       "status_since": "2026-07-01",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://data.cms.gov/",
@@ -528,7 +528,7 @@
       "status_since": "2026-06-29",
       "status_source": "auto",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.who.int/data/gho",
@@ -582,7 +582,7 @@
       "status_since": "2026-08-03",
       "status_source": "curator",
       "observed": {
-        "checked": "2026-08-04",
+        "checked": "2026-09-05",
         "reachable": true,
         "http_status": 200,
         "final_url": "https://www.who.int/data/data-collection-tools/who-mortality-database",
