@@ -1,0 +1,42 @@
+id: ecdc-data-dashboards-databases
+type: dataset
+title: ECDC Data, Dashboards and Databases (infectious disease surveillance)
+description: |
+  The European Centre for Disease Prevention and Control's hub for EU/EEA infectious-disease surveillance data: the Surveillance Atlas of Infectious Diseases, the European Respiratory Virus Surveillance Summary (ERVISS), antimicrobial consumption (ESAC-Net), vaccination coverage and polio dashboards, downloadable datasets and maps.
+publisher: European Centre for Disease Prevention and Control (ECDC)
+jurisdiction:
+  scope: regional-bloc
+  country: null
+topics:
+- infectious-disease
+- surveillance
+- antimicrobial-resistance
+- vaccination
+- europe
+source:
+  canonical_url: https://www.ecdc.europa.eu/en/data-dashboards-and-databases
+access:
+  method:
+  - web
+  - bulk
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format: []
+status: live
+status_since: '2026-11-01'
+status_source: curator
+observed:
+  checked: '2026-11-01'
+  reachable: null
+  http_status: null
+  final_url: null
+coverage:
+  spatial: EU/EEA member states (some datasets global, e.g. MERS-CoV maps)
+  temporal: varies by disease and dashboard
+  cadence: irregular
+license: ECDC intellectual property notice (ECDC-owned material CC-BY-4.0; third-party surveillance data reusable for commercial and non-commercial purposes with the prescribed source acknowledgement)
+attribution: Dataset provided by ECDC based on data provided by public health authorities, scientific institutes or health care providers in the relevant reporting countries and/or by WHO.
+notes: |
+  Human-verified 2026-11-01: HTTP 200. The issue's URL https://www.ecdc.europa.eu/en/data redirects to https://www.ecdc.europa.eu/en/data-dashboards-and-databases, which is catalogued here. The page says "All data on topics in the area of infectious diseases collected by ECDC are made accessible in various formats, such as interactive databases and dashboards, downloadable datasets and maps." It links ERVISS, the Surveillance Atlas of Infectious Diseases, EpiPulse, the ESAC-Net antimicrobial consumption dashboard, the ECDC Geoportal, RespiCast, the vaccination coverage dashboard, the Vaccine Scheduler and the polio dashboard. The latest map listed is "Polio dashboard", 16 October 2026. It also links an "EU/EEA surveillance open data policy". The individual tools' download formats and APIs weren't checked, so format is left empty. Cadence varies by tool (ERVISS is weekly), so it is recorded as irregular. EpiPulse is ECDC's surveillance portal and was not checked for login requirements.
+  Licence checked 2026-11-01: ECDC's intellectual property notices (https://www.ecdc.europa.eu/en/ecdc-intellectual-property-notices) say "Unless otherwise stated, information and documents made publicly available on ECDC web pages and for which ECDC owns the copyright are licenced in accordance with the CC BY 4.0 licence". Under "Third party data in ECDC databases", the data "have been provided to ECDC by the public health authorities ... and/or by WHO. Except where otherwise stated, these data may be downloaded and reproduced for commercial and non-commercial purposes as long as the source of these data is acknowledged" in the form given in attribution, and modifications must be stated.
