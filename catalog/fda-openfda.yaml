@@ -1,0 +1,44 @@
+id: fda-openfda
+type: dataset
+title: openFDA
+description: |
+  The U.S. Food and Drug Administration's open API and bulk downloads over its public data: drug, device, food, animal and tobacco adverse-event reports (including FAERS), recall enforcement reports, drug labels, the NDC directory, Drugs@FDA, device 510(k)/PMA/UDI data and more.
+publisher: U.S. Food and Drug Administration (FDA)
+jurisdiction:
+  scope: national
+  country: US
+topics:
+- drugs
+- adverse-events
+- recalls
+- devices
+- drug-labels
+source:
+  canonical_url: https://open.fda.gov/
+access:
+  method:
+  - web
+  - api
+  - bulk
+  auth_required: false
+  auth_note: Free API key recommended; without one, limits are lower (see rate_limit)
+  rate_limit: 'No key: 240 requests/minute and 1,000/day per IP; with a free key: 240/minute and 120,000/day per key'
+format:
+- json
+status: live
+status_since: '2026-11-01'
+status_source: curator
+observed:
+  checked: '2026-11-01'
+  reachable: null
+  http_status: null
+  final_url: null
+coverage:
+  spatial: United States (FDA-regulated products; adverse-event reports can originate abroad)
+  temporal: varies by endpoint
+  cadence: weekly
+license: CC0-1.0 (openFDA Terms of Service, "unless otherwise noted"; some third-party works are marked as not public domain)
+attribution: Data provided by the U.S. Food and Drug Administration (https://open.fda.gov)
+notes: |
+  Human-verified 2026-11-01: HTTP 200. The home page offers "Open-source APIs" and "Download openFDA Data ... in zipped JSON format". The downloads page (https://open.fda.gov/data/downloads/) lists endpoints from Animal & Veterinary to Tobacco; for example "Drug Adverse Events [/drug/event] ... There are 1767 files, last updated on 2026-10-29" and Drug Labeling "last updated on 2026-10-30". It notes that animal and veterinary adverse events are updated quarterly, so cadence varies by endpoint; "weekly" is an approximation from the update dates seen, not a documented schedule. A key-less call to https://api.fda.gov/drug/event.json?limit=1 returned JSON. The authentication page says "An API key is required to make calls to the openFDA API. The key is free of charge", yet it also lists limits "With no API key: 240 requests per minute, per IP address. 1,000 requests per day, per IP address", so auth_required is false here.
+  Licence checked 2026-11-01: openFDA Terms of Service (https://open.fda.gov/terms/), "Data Rights and Usage": "Unless otherwise noted, the content, data, documentation, code, and related materials on openFDA is public domain and made available with a Creative Commons CC0 1.0 Universal dedication." It adds: "Some data on openFDA may not be public domain, such as copies of copyrightable works made available to the FDA by private entities", and such works are marked with a warning. Attribution is "not required" but requested in the form given above.
