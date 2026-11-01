@@ -35,9 +35,11 @@ status_since: '2026-11-01'
 status_source: curator
 observed:
   checked: '2026-11-01'
-  reachable: null
-  http_status: null
-  final_url: null
+  reachable: true
+  http_status: 200
+  final_url: https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health
+  redirect_chain: []
+  fingerprint_result: no-baseline
 coverage:
   spatial: United States (national, state and substate estimates; public-use files exclude most geography)
   temporal: 1979-present (NHSDA 1979-2001, NSDUH 2002-present; public-use files listed through 2024)

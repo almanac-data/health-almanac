@@ -29,9 +29,11 @@ status_since: '2026-11-01'
 status_source: curator
 observed:
   checked: '2026-11-01'
-  reachable: null
-  http_status: null
-  final_url: null
+  reachable: true
+  http_status: 200
+  final_url: https://clinicaltrials.gov/
+  redirect_chain: []
+  fingerprint_result: no-baseline
 coverage:
   spatial: global (studies in the United States and many other countries)
   temporal: varies by study record
