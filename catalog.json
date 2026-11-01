@@ -1,9 +1,9 @@
 {
   "name": "Health Almanac",
   "description": "An open, versioned index of public health data.",
-  "count": 14,
+  "count": 15,
   "by_status": {
-    "live": 14
+    "live": 15
   },
   "entries": [
     {
@@ -642,6 +642,62 @@
       "license": "unverified — OECD terms page (oecd.org/en/about/terms-conditions.html) is behind a Cloudflare bot challenge and could not be read",
       "attribution": "OECD, OECD Health Statistics (OECD Data Explorer)",
       "notes": "Human-verified 2026-11-01: HTTP 200 (curl; the Data Explorer is a JavaScript app and was read in headless Chromium). The issue's URL, https://www.oecd.org/en/data/datasets/oecd-health-statistics.html, returned a Cloudflare \"Performing security verification\" page (HTTP 403) to curl, headless Chromium (new headless mode, 25-second wait) and WebFetch, so this entry points at the OECD Data Explorer, where OECD serves the data. With the Topic facet set to Health it reports \"86 datasets found\", grouped into \"Health expenditure and financing\" (5), \"Health status\" (16), \"Risk factors for health\" (7), \"Healthcare human resources\" (16), \"Healthcare provider resources\" (6), \"Healthcare use\" (10), \"Healthcare quality and outcomes\" (14), \"Pharmaceutical market\" (4), \"Healthcare coverage\" (1) and \"Long-term care\" (4). The SDMX API (https://sdmx.oecd.org/public/rest/) answered HTTP 200 and lists these under agency OECD.ELS.HD, for example DSD_SHA@DF_SHA \"Health expenditure and financing\" and DSD_HEALTH_STAT@DF_LE \"Life expectancy\". I did not confirm that every OECD.ELS.HD dataflow belongs to the product OECD brands \"OECD Health Statistics\", and I did not see a latest release date. The formats are taken from the Data Explorer's usual download and API options and weren't tested.\nLicence checked 2026-11-01: not verified. The Data Explorer's terms link goes to https://www.oecd.org/en/about/terms-conditions.html, which was blocked as above. Another vertical's entry (labor-almanac oecd-employment-labour-market) quotes those terms as allowing reuse of Data \"for any purpose, even for commercial use\" with credit. I could not read them this session, so no licence is asserted here.\n"
+    },
+    {
+      "id": "samhsa-nsduh",
+      "type": "dataset",
+      "title": "SAMHSA National Survey on Drug Use and Health (NSDUH)",
+      "description": "The main U.S. federal survey of tobacco, alcohol and drug use, substance use disorders, mental health and treatment among the civilian noninstitutionalized population aged 12 and older, with national, state and substate reports, detailed tables and public-use microdata files.\n",
+      "publisher": "U.S. Substance Abuse and Mental Health Services Administration (SAMHSA), Center for Behavioral Health Statistics and Quality",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
+      "topics": [
+        "substance-use",
+        "mental-health",
+        "survey",
+        "microdata"
+      ],
+      "source": {
+        "canonical_url": "https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health"
+      },
+      "access": {
+        "method": [
+          "web",
+          "bulk"
+        ],
+        "auth_required": false,
+        "auth_note": "Public-use files download freely; restricted-use files require an application to a Research Data Center",
+        "rate_limit": null
+      },
+      "format": [
+        "sas",
+        "spss",
+        "stata",
+        "r",
+        "ascii",
+        "delimited",
+        "pdf",
+        "xlsx"
+      ],
+      "status": "live",
+      "status_since": "2026-11-01",
+      "status_source": "curator",
+      "observed": {
+        "checked": "2026-11-01",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null
+      },
+      "coverage": {
+        "spatial": "United States (national, state and substate estimates; public-use files exclude most geography)",
+        "temporal": "1979-present (NHSDA 1979-2001, NSDUH 2002-present; public-use files listed through 2024)",
+        "cadence": "annual"
+      },
+      "license": "SAMHSA data Terms of Use (use solely for research or statistical purposes; no re-identification of respondents)",
+      "attribution": "U.S. Department of Health and Human Services, Substance Abuse and Mental Health Services Administration, Center for Behavioral Health Statistics and Quality. (year). National Survey on Drug Use and Health (year). Retrieved from https://www.samhsa.gov/data/",
+      "notes": "Human-verified 2026-11-01: HTTP 200 (curl and headless Chromium). On the page, releases read as follows: the headline is \"SAMHSA Releases Results from the 2025 National Survey on Drug Use and Health (NSDUH)\". It says \"This release includes a user-friendly infographic report, a more comprehensive report, detailed tables, and an accompanying methodology report\", and the year selector for national reports runs from 2025 back to \"1998-2014\". The most recent spotlights listed are dated 9/30/2026 and 8/31/2026, and the page shows \"Last Updated: 9/30/2026\". The Download Data Files page (…/nsduh-national-survey-drug-use-and-health/datafiles, \"Last Updated: 2/13/2025\") lists public-use files from NHSDA 1979 to \"NSDUH 2024\" and \"NSDUH 2021-2024\"; no 2025 public-use file was listed there. Downloads are offered in SAS, SPSS, Stata, ASCII, delimited and R, with PDF codebooks and xlsx crosswalks. The page says \"PUFs will generate comparable, but not identical, estimates to those published by SAMHSA because of the PUFs disclosure-avoidance methods.\" It also notes that 2021-onward data \"cannot be compared or pooled with earlier years\". Restricted-use files are available through NCHS Research Data Centers. I did not open or test the individual download files.\nLicence checked 2026-11-01: SAMHSA's data Terms and Conditions (https://www.samhsa.gov/data/about-us/terms-and-conditions) say \"By using SAMHSA's data, you agree to the Terms of Use listed on this page\". Users of data agree \"To use these datasets solely for research or statistical purposes\", that \"They cannot use it for re-identification of specific research subjects\", and \"To make no use of the identity of any research subject discovered inadvertently\". Although it is a federal agency's product, these use conditions apply, so the entry is not marked plain public domain. The citation format comes from SAMHSA's FAQ \"Why and how should I cite SAMHSA data?\".\n"
     },
     {
       "id": "who-gho",
