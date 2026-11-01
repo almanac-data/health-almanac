@@ -1,0 +1,48 @@
+id: eurostat-health-database
+type: dataset
+title: Eurostat Health Statistics Database
+description: |
+  Eurostat's official EU health statistics: health status and healthy life years, health determinants (European Health Interview Survey), health care resources, expenditure and activities, causes of death, and health and safety at work, harmonised across EU member states.
+publisher: Eurostat (European Commission)
+jurisdiction:
+  scope: regional-bloc
+  country: null
+topics:
+- health
+- causes-of-death
+- health-care
+- health-expenditure
+- europe
+source:
+  canonical_url: https://ec.europa.eu/eurostat/web/health/database
+access:
+  method:
+  - web
+  - api
+  - bulk
+  auth_required: false
+  auth_note: null
+  rate_limit: null
+format:
+- csv
+- tsv
+- xlsx
+- sdmx
+- json
+status: live
+status_since: '2026-11-01'
+status_source: curator
+observed:
+  checked: '2026-11-01'
+  reachable: null
+  http_status: null
+  final_url: null
+coverage:
+  spatial: EU member states (plus some EFTA and candidate countries)
+  temporal: varies by dataset
+  cadence: annual
+license: Eurostat free re-use policy (data reuse authorised for commercial or non-commercial purposes provided the source is acknowledged; Commission Decision of 12 December 2011)
+attribution: Eurostat
+notes: |
+  Human-verified 2026-11-01: HTTP 200 (curl and headless Chromium). The page is "Database - Health - Eurostat", with "Selected datasets" and "Detailed datasets" tabs whose dataset tree loads by JavaScript and did not render in the headless session. Eurostat's catalogue table of contents (https://ec.europa.eu/eurostat/api/dissemination/catalogue/toc/txt?lang=en) answered HTTP 200 and lists a "Health" folder (code hlth) with subfolders "Health status", "Health determinants", "Health care", "Causes of death" and "Health and safety at work", holding 496 datasets. The latest data update listed is 27.10.2026, and "Causes of death - deaths by country of residence and occurrence" (hlth_cd_aro) was last updated 23.09.2026. A JSON request for hlth_cd_aro through the dissemination API (https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/) returned HTTP 200. The formats listed are Eurostat's usual download options and weren't checked one by one.
+  Licence checked 2026-11-01: Eurostat's "Copyright notice and free re-use of data" (https://ec.europa.eu/eurostat/help/copyright-notice) says editorial content "is licensed under the Creative Commons Attribution 4.0 International licence", and "Reuse of statistical data, metadata, publications, and other dissemination tools published on this website for commercial or non-commercial purposes is authorised provided the source is acknowledged. The reuse policy of the European Commission is implemented by the Decision of 12 December 2011." Exceptions cover third-party material and data "identified as belonging to sources other than Eurostat" (non-commercial reuse only). The notice ties CC BY 4.0 to editorial content, and the data sentence names no licence, so this entry quotes the data reuse terms rather than labelling them CC-BY-4.0, as some sibling Eurostat entries do.
