@@ -1,9 +1,9 @@
 {
   "name": "Health Almanac",
   "description": "An open, versioned index of public health data.",
-  "count": 16,
+  "count": 17,
   "by_status": {
-    "live": 16
+    "live": 17
   },
   "entries": [
     {
@@ -643,6 +643,56 @@
       "license": "CC0-1.0 (openFDA Terms of Service, \"unless otherwise noted\"; some third-party works are marked as not public domain)",
       "attribution": "Data provided by the U.S. Food and Drug Administration (https://open.fda.gov)",
       "notes": "Human-verified 2026-11-01: HTTP 200. The home page offers \"Open-source APIs\" and \"Download openFDA Data ... in zipped JSON format\". The downloads page (https://open.fda.gov/data/downloads/) lists endpoints from Animal & Veterinary to Tobacco; for example \"Drug Adverse Events [/drug/event] ... There are 1767 files, last updated on 2026-10-29\" and Drug Labeling \"last updated on 2026-10-30\". It notes that animal and veterinary adverse events are updated quarterly, so cadence varies by endpoint; \"weekly\" is an approximation from the update dates seen, not a documented schedule. A key-less call to https://api.fda.gov/drug/event.json?limit=1 returned JSON. The authentication page says \"An API key is required to make calls to the openFDA API. The key is free of charge\", yet it also lists limits \"With no API key: 240 requests per minute, per IP address. 1,000 requests per day, per IP address\", so auth_required is false here.\nLicence checked 2026-11-01: openFDA Terms of Service (https://open.fda.gov/terms/), \"Data Rights and Usage\": \"Unless otherwise noted, the content, data, documentation, code, and related materials on openFDA is public domain and made available with a Creative Commons CC0 1.0 Universal dedication.\" It adds: \"Some data on openFDA may not be public domain, such as copies of copyrightable works made available to the FDA by private entities\", and such works are marked with a warning. Attribution is \"not required\" but requested in the form given above.\n"
+    },
+    {
+      "id": "nlm-clinicaltrials-gov",
+      "type": "dataset",
+      "title": "ClinicalTrials.gov",
+      "description": "The U.S. National Library of Medicine's registry and results database of clinical studies conducted in the United States and around the world, with a public REST API and bulk download of study records.\n",
+      "publisher": "U.S. National Library of Medicine, National Institutes of Health (NIH)",
+      "jurisdiction": {
+        "scope": "national",
+        "country": "US"
+      },
+      "topics": [
+        "clinical-trials",
+        "registry",
+        "research"
+      ],
+      "source": {
+        "canonical_url": "https://clinicaltrials.gov/"
+      },
+      "access": {
+        "method": [
+          "web",
+          "api",
+          "bulk"
+        ],
+        "auth_required": false,
+        "auth_note": null,
+        "rate_limit": null
+      },
+      "format": [
+        "json",
+        "csv"
+      ],
+      "status": "live",
+      "status_since": "2026-11-01",
+      "status_source": "curator",
+      "observed": {
+        "checked": "2026-11-01",
+        "reachable": null,
+        "http_status": null,
+        "final_url": null
+      },
+      "coverage": {
+        "spatial": "global (studies in the United States and many other countries)",
+        "temporal": "varies by study record",
+        "cadence": "daily"
+      },
+      "license": "ClinicalTrials.gov Terms and Conditions (free to all requesters, attribution required; not public domain outside the US)",
+      "attribution": "ClinicalTrials.gov (with the date the data were processed by ClinicalTrials.gov)",
+      "notes": "Human-verified 2026-11-01: HTTP 200 (curl and headless Chromium). The site links the \"ClinicalTrials.gov API\" (https://clinicaltrials.gov/data-api/api), \"How to Download Study Records\" and FHIR access; the About API page lists CSV and RIS downloads and a JSON study data structure. The v2 API answered: /api/v2/version returned apiVersion 2.0.5 with dataTimestamp 2026-10-30T09:00:04, and /api/v2/stats/size reported totalStudies 609551.\nLicence checked 2026-11-01: the Terms and Conditions (https://clinicaltrials.gov/about-site/terms-conditions, last updated January 31, 2023) say \"ClinicalTrials.gov data are available to all requesters, both within and outside the United States, at no charge.\" Users \"should: Attribute the source of the data as ClinicalTrials.gov\", keep the data current, \"Clearly display the date the data were processed by ClinicalTrials.gov\" and state any modifications. They also say \"The ClinicalTrials.gov data carry an international copyright outside the United States\" and \"Some ClinicalTrials.gov data may be subject to the copyright of third parties\". So it is not catalogued as plain public domain. Rate limits and the bulk-download formats beyond CSV/JSON weren't checked.\n"
     },
     {
       "id": "oecd-health-statistics",
