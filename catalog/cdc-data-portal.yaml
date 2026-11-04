@@ -36,6 +36,13 @@ observed:
   final_url: https://data.cdc.gov/
   redirect_chain: []
   fingerprint_result: no-baseline
+recovery:
+- via: wayback
+  url: https://web.archive.org/web/20261103021359/https://data.cdc.gov/
+  authenticity: timestamped
+  permission: ok
+  captured: '2026-11-03'
+  notes: 'Recorded by scripts/capture_archives.py on 2026-11-04: a capture it requested from Save Page Now.'
 coverage:
   spatial: United States
   temporal: varies by dataset

@@ -33,6 +33,13 @@ observed:
   final_url: https://www.ecdc.europa.eu/en/data-dashboards-and-databases
   redirect_chain: []
   fingerprint_result: no-baseline
+recovery:
+- via: wayback
+  url: https://web.archive.org/web/20261024203229/https://www.ecdc.europa.eu/en/data-dashboards-and-databases
+  authenticity: timestamped
+  permission: ok
+  captured: '2026-10-24'
+  notes: 'Recorded by scripts/capture_archives.py on 2026-11-04: the newest existing capture (Save Page Now returned 0).'
 coverage:
   spatial: EU/EEA member states (some datasets global, e.g. MERS-CoV maps)
   temporal: varies by disease and dashboard
