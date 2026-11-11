@@ -34,6 +34,13 @@ observed:
   final_url: https://clinicaltrials.gov/
   redirect_chain: []
   fingerprint_result: no-baseline
+recovery:
+- via: wayback
+  url: https://web.archive.org/web/20261110125411/https://clinicaltrials.gov/
+  authenticity: timestamped
+  permission: ok
+  captured: '2026-11-10'
+  notes: 'Recorded by scripts/capture_archives.py on 2026-11-11: a capture it requested from Save Page Now.'
 coverage:
   spatial: global (studies in the United States and many other countries)
   temporal: varies by study record
