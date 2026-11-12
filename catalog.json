@@ -688,6 +688,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261111215833/https://ec.europa.eu/eurostat/web/health/database",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-11-11",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: a capture it requested from Save Page Now."
+        }
+      ],
       "coverage": {
         "spatial": "EU member states (plus some EFTA and candidate countries)",
         "temporal": "varies by dataset",
@@ -741,6 +751,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261030012054/https://open.fda.gov/",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-10-30",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: the newest existing capture (Save Page Now returned 0)."
+        }
+      ],
       "coverage": {
         "spatial": "United States (FDA-regulated products; adverse-event reports can originate abroad)",
         "temporal": "varies by endpoint",
@@ -793,6 +813,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261110125411/https://clinicaltrials.gov/",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-11-10",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: a capture it requested from Save Page Now."
+        }
+      ],
       "coverage": {
         "spatial": "global (studies in the United States and many other countries)",
         "temporal": "varies by study record",
@@ -903,6 +933,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261030034450/https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-10-30",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: the newest existing capture (Save Page Now returned 520)."
+        }
+      ],
       "coverage": {
         "spatial": "United States (national, state and substate estimates; public-use files exclude most geography)",
         "temporal": "1979-present (NHSDA 1979-2001, NSDUH 2002-present; public-use files listed through 2024)",
@@ -957,6 +997,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261103093255/https://www.who.int/data/gho",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-11-03",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: the newest existing capture (Save Page Now returned 0)."
+        }
+      ],
       "coverage": {
         "spatial": "global (WHO member states)",
         "temporal": "2000-present",
@@ -1011,6 +1061,16 @@
         "redirect_chain": [],
         "fingerprint_result": "no-baseline"
       },
+      "recovery": [
+        {
+          "via": "wayback",
+          "url": "https://web.archive.org/web/20261111221347/https://www.who.int/data/data-collection-tools/who-mortality-database",
+          "authenticity": "timestamped",
+          "permission": "ok",
+          "captured": "2026-11-11",
+          "notes": "Recorded by scripts/capture_archives.py on 2026-11-11: a capture it requested from Save Page Now."
+        }
+      ],
       "coverage": {
         "spatial": "global (WHO member states)",
         "temporal": "1950-present",

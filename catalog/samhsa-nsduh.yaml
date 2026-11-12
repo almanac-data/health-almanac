@@ -40,6 +40,13 @@ observed:
   final_url: https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health
   redirect_chain: []
   fingerprint_result: no-baseline
+recovery:
+- via: wayback
+  url: https://web.archive.org/web/20261030034450/https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health
+  authenticity: timestamped
+  permission: ok
+  captured: '2026-10-30'
+  notes: 'Recorded by scripts/capture_archives.py on 2026-11-11: the newest existing capture (Save Page Now returned 520).'
 coverage:
   spatial: United States (national, state and substate estimates; public-use files exclude most geography)
   temporal: 1979-present (NHSDA 1979-2001, NSDUH 2002-present; public-use files listed through 2024)
