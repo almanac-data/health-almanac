@@ -34,6 +34,13 @@ observed:
   final_url: https://data-explorer.oecd.org/?fs%5B0%5D=Topic%2C0%7CHealth%23HEA%23&pg=0&fc=Topic
   redirect_chain: []
   fingerprint_result: no-baseline
+recovery:
+- via: wayback
+  url: https://web.archive.org/web/20261118223723/https://data-explorer.oecd.org/?fs%5B0%5D=Topic%2C0%7CHealth%23HEA%23&pg=0&fc=Topic
+  authenticity: timestamped
+  permission: ok
+  captured: '2026-11-18'
+  notes: 'Recorded by scripts/capture_archives.py on 2026-11-18: a capture it requested from Save Page Now.'
 coverage:
   spatial: OECD member countries and selected partner economies
   temporal: varies by dataset
