@@ -34,9 +34,13 @@ scripts/validate.py                schema + filename==id + uniqueness checks (CI
 scripts/build_index.py             catalog/*.yaml -> catalog.json
 scripts/check_links.py             reachability checker (reports; writes `observed` only with --write-observed)
 scripts/alert_on_dead_links.py     turns a reachability report into GitHub issues (idempotent)
+scripts/capture_archives.py        asks Save Page Now for fresh captures; writes `recovery[]` only, with --write
 .github/workflows/ci.yml           runs validate + a stale-index guard on every PR
 .github/workflows/link-check.yml   daily reachability sweep + dead-link alerting; opens an
                                    `observed`-refresh PR when the probe sees something new
+.github/workflows/capture-archives.yml  weekly archive captures for live sources; opens a
+                                   `recovery`-refresh PR
+.github/dependabot.yml             weekly pip (minor+patch grouped) and github-actions update PRs
 ```
 
 This file is propagated verbatim to every vertical, so it describes **only what every
@@ -55,7 +59,7 @@ verticals a guide pointing at files they do not have.
 4. **Never hand-edit `catalog.json`.** It is generated. Edit the YAML, regenerate.
 5. **Verify before you assert.** Do not invent `observed.checked` dates or URL reachability.
    If you can reach the network, confirm `source.canonical_url` and set `observed.checked` to
-   today (`YYYY-MM-DD`). If you cannot verify, say so in the PR — do not fabricate.
+   today (`YYYY-MM-DD`). If you cannot verify something, say so in the PR — do not fabricate.
    **`observed` is machine-written.** Set `checked` and leave `reachable`, `http_status`, and
    `final_url` null — only `scripts/check_links.py --write-observed` fills those, from a real
    probe. Recording your own `curl` output there disguises a human check as a machine one.
@@ -88,8 +92,21 @@ python scripts/check_links.py --write-observed && python scripts/build_index.py
 
 Rebuild the index in the same change, since `observed` is carried into `catalog.json`.
 
-The daily `link-check` workflow does this for you and proposes the result as a
-`monitor/observed-refresh` PR. **That PR only opens automatically if the repo allows it** —
+The daily `link-check` workflow does this for you and proposes the result as one rolling
+`monitor/observed-refresh` PR. When only `checked` dates moved, the PR is **routine** and
+merges itself once `test` passes (auto-merge, so the repo needs *Settings → General →
+"Allow auto-merge"*). When anything else in `observed` changed, it waits for a human and
+lists the changes in its body (`python scripts/check_links.py --observed-changes-since HEAD`
+prints the same list locally).
+
+**What merges itself, and what waits.** Every bot PR goes through the default branch's
+ruleset (a PR and a passing `test`); none bypasses it. These arm auto-merge and need no one:
+a routine observed refresh, a `monitor/archive-refresh` PR (`recovery[]` candidates only), an
+engine propagation PR (already reviewed in the template), and Dependabot minor and patch
+bumps (`.github/workflows/dependabot-automerge.yml`). These wait for a human: an observed
+refresh where a source answered differently, a Dependabot major, and any of the above whose
+CI fails. All of it needs *Settings → General → "Allow auto-merge"*; where that is off, the
+PR is opened as before and the run says so. **That PR only opens automatically if the repo allows it** —
 *Settings → Actions → General → "Allow GitHub Actions to create and approve pull requests"*,
 which is off by default and which a workflow's `permissions:` block cannot grant. With it
 off the job still probes, still writes, and still pushes the branch; it just logs a warning
@@ -108,8 +125,9 @@ python scripts/check_links.py --headless
 
 The headless rung only ever *upgrades* a blocked source to `ok`; it never flags one as dead.
 
-To add a dataset: copy `catalog/example-dataset.yaml`, fill every required field, validate,
-rebuild the index, open a PR. See `CONTRIBUTING.md` for the full checklist.
+To add a dataset: copy an existing entry (or `docs/catalog-entry.example.yaml` where present)
+to `catalog/<id>.yaml`, replace every example value, fill every required field, validate, rebuild
+the index, and open a PR. See `CONTRIBUTING.md` for the full checklist.
 
 ## Licensing
 
